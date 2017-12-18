@@ -144,20 +144,21 @@ public class FizzBuzz {
 
 		Boolean isDeluxe = false;
 
-		Boolean isDigitIdentical = true;
-		String numberStr = number.toString();
-		char firstChar = numberStr.charAt(0);
-
-		// we can use search alogs like binary search etc..
-		for (int i = 0; i < numberStr.length(); i++) {
-			if (!(numberStr.charAt(i) == firstChar)) {
-				isDigitIdentical = false;
+		
+		int digit = number % 10;
+		while (number>0) {
+			if(number %10 != digit) {
 				break;
-			}
+			} 
+			number /= 10; 
 		}
+		
+		isDeluxe = true;
 
-		if (isDigitIdentical && number > 10) {
+		if (isDeluxe && number > 10) {
 			isDeluxe = true;
+		} else {
+			isDeluxe = false;
 		}
 
 		return isDeluxe;
