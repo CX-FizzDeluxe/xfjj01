@@ -1,11 +1,16 @@
 package befaster.solutions;
 
-import befaster.runner.SolutionNotImplementedException;
+import befaster.runner.InvalidInputException;
 
 public class Sum {
 
     public static int sum(int x, int y) {
-        throw new SolutionNotImplementedException();
+
+    	if(x <0 || x >100) {
+            throw new InvalidInputException();
+    	}
+        
+        
     }
 
 }
