@@ -111,8 +111,13 @@ public class FizzBuzzTest {
     }
     
     @Test
-    public void testFizz_BuzzInputMultiple_5_Has_5() {
+    public void testFizz_BuzzInputMultiple_5_Has_5Odd() {
         assertThat(FizzBuzz.fizz_Buzz(515), equalTo("buzz fake deluxe"));
+    }
+    
+    @Test
+    public void testFizz_BuzzInputMultiple_5_Has_5Even() {
+        assertThat(FizzBuzz.fizz_Buzz(520), equalTo("buzz deluxe"));
     }
 
     @Test
