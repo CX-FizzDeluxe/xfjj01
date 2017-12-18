@@ -147,7 +147,17 @@ public class FizzBuzzTest {
     
     @Test
     public void testFizz_BuzzInput_NotMultiple3Or5_Greater10_DigitsIdentical() {
-        assertThat(FizzBuzz.fizz_Buzz(7777), equalTo("deluxe"));
+        assertThat(FizzBuzz.fizz_Buzz(8888), equalTo("deluxe"));
+    }
+    
+    @Test
+    public void testFizz_BuzzInput_NotMultiple3Or5_Greater10_DigitsIdentical_Odd() {
+        assertThat(FizzBuzz.fizz_Buzz(7777), equalTo("fake deluxe"));
+    }
+    
+    @Test
+    public void testFizz_BuzzInput_Multiple3And5_Greater10_DigitsIdentical_Odd() {
+        assertThat(FizzBuzz.fizz_Buzz(555), equalTo("fake deluxe"));
     }
     
     @Test
@@ -160,5 +170,7 @@ public class FizzBuzzTest {
     public void testFizz_Buzz_Divisible3And5_Greater10_DigitsIdentical() {
         assertThat(FizzBuzz.fizz_Buzz(?), equalTo("fizz buzz deluxe"));
     }*/
+    
+    
     
 }
