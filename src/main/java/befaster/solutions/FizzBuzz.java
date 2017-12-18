@@ -136,6 +136,7 @@ public class FizzBuzz {
 		String numberStr = number.toString();
 		char firstChar = numberStr.charAt(0);
 		
+		// we can use search alogs like binary search etc..
 		for(int i=0; i<numberStr.length(); i++) {
 			if(!(numberStr.charAt(i) == firstChar)) {
 				isDigitIdentical = false;
