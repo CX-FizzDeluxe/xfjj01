@@ -131,14 +131,23 @@ public class FizzBuzz {
 	private static boolean isNumberDeluxe(Integer number) {
 		
 		Boolean isDeluxe = false;
+		
+		Boolean isDigitIdentical = true;
 		String numberStr = number.toString();
 		char firstChar = numberStr.charAt(0);
-		for(number.)
-		if(number > 10 && true) {
-			
+		
+		for(int i=0; i<numberStr.length(); i++) {
+			if(!(numberStr.charAt(i) == firstChar)) {
+				isDigitIdentical = false;
+				break;
+			}
 		}
 		
-		return false;
+		if(isDigitIdentical && number > 10) {
+			isDeluxe = true;
+		}
+		
+		return isDeluxe;
 	}
 
 }
