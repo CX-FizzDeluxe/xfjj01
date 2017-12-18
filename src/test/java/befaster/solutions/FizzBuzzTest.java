@@ -33,4 +33,33 @@ public class FizzBuzzTest {
         assertThat(FizzBuzz.fizzBuzz(15), equalTo("fizz buzz"));
     }
     
+    
+    
+    /**--------------**/
+    
+    @Test
+    public void testFizz_BuzzInputTwo() {
+        assertThat(FizzBuzz.fizz_Buzz(2), equalTo("2"));
+    }
+    
+    
+    @Test
+    public void testFizz_BuzzInput9998() {
+        assertThat(FizzBuzz.fizz_Buzz(9998), equalTo("9998"));
+    }
+    
+    @Test
+    public void testFizz_BuzzInputMultiple_3() {
+        assertThat(FizzBuzz.fizz_Buzz(18), equalTo("fizz"));
+    }
+    
+    @Test
+    public void testFizz_BuzzInputMultiple_5() {
+        assertThat(FizzBuzz.fizz_Buzz(20), equalTo("buzz"));
+    }
+    
+    @Test
+    public void testFizz_BuzzInputMultiple_3_5() {
+        assertThat(FizzBuzz.fizz_Buzz(15), equalTo("fizz buzz"));
+    }
 }

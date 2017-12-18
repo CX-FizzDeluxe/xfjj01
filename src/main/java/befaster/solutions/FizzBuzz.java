@@ -37,4 +37,34 @@ public class FizzBuzz {
 		return result.toString();
 	}
 
-}
+	/**
+	 * 	
+	 * @param number
+	 * @return
+	 */
+	public static String fizz_Buzz(Integer number) {
+		
+		StringBuilder result = new StringBuilder();
+		Boolean isRes = false; 
+		
+		if (number % THREE_INT == 0) {
+			result.append(FIZZ);
+			isRes = true;
+		}
+		if (number % FIVE_INT == 0) {
+			if(isRes) {
+				result.append(SPACE);
+			}
+			result.append(BUZZ);
+			isRes = true;
+		}
+		
+		if(!isRes.booleanValue())
+		{
+			result.append(number.intValue());
+		}
+
+		return result.toString();
+	}
+
+}
