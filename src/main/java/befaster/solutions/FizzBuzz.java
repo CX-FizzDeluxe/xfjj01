@@ -89,7 +89,7 @@ public class FizzBuzz {
 	 * 
 	 * @param number
 	 * @return "fizz" or "buzz" or "deluxe" or "fizz buzz" or "fizz deluxe" or
-	 *         "buzz deluxe" or "fizz buzz deluxe" or number
+	 *         "buzz deluxe" or "fizz buzz deluxe" or "fake" or "fizz buzz fake deluxe" or number
 	 */
 	public static String fizz_Buzz(Integer number) {
 
