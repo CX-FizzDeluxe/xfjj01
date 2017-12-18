@@ -96,11 +96,13 @@ public class FizzBuzz {
 		StringBuilder result = new StringBuilder();
 		Boolean isRes = false;
 
+		// checks fizz
 		if (number % THREE_INT == 0 || number.toString().indexOf(THREE_STR) >= 0) {
 			result.append(FIZZ);
 			isRes = true;
 		}
 
+		// checks buzz
 		if (number % FIVE_INT == 0 || number.toString().indexOf(FIVE_STR) >= 0) {
 			if (isRes) {
 				result.append(SPACE);
@@ -109,7 +111,10 @@ public class FizzBuzz {
 			isRes = true;
 		}
 
+		// checks deluxe
 		Boolean isNumDeluxe = isNumberDeluxe(number);
+		
+		// business rule fake 
 		if (isNumDeluxe && number % 2 != 0) {
 			if (isRes) {
 				result.append(SPACE);
@@ -118,6 +123,7 @@ public class FizzBuzz {
 			isRes = true;
 		}
 
+		// business rule deluxe
 		if (isNumDeluxe) {
 			if (isRes) {
 				result.append(SPACE);
@@ -136,6 +142,36 @@ public class FizzBuzz {
 	/**
 	 * A number is considered to be "deluxe" if it is greater than 10 and all
 	 * the digits are identical
+	 * 
+	 * @param number
+	 * @return true if number is deluxe else false.
+	 */
+	private static boolean isNumberDeluxeOld(Integer number) {
+
+		Boolean isDeluxe = false;
+		Boolean isDigitIdentical = true;
+		Integer numberTemp = number;
+		
+		int digit = numberTemp % 10;
+		while (numberTemp>0) {
+			if(numberTemp %10 != digit) {
+				isDigitIdentical = false;
+				break;
+			} 
+			numberTemp /= 10; 
+		}
+		
+		if (isDigitIdentical && number > 10) {
+			isDeluxe = true;
+		}
+
+		return isDeluxe;
+	}
+
+	
+	/**
+	 * A number is "deluxe" if it is divisible by 3 AND it has a 3 in it. 
+	 * A number is "deluxe" if it is divisible by 5 AND it has a 5 in it
 	 * 
 	 * @param number
 	 * @return true if number is deluxe else false.
