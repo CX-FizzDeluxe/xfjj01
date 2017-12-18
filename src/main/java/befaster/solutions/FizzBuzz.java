@@ -12,6 +12,14 @@ public class FizzBuzz {
 
 	private static final String SPACE = " ";
 
+	/**
+	 * If the number is a multiple of three then you should write "fizz"
+	 * If the number is a multiple of five then you should write "buzz"
+	 * If the number is a multiple of both three and five then you should write "fizz buzz"
+	 * If the number is not a multiple of five or three then write the number, example 1
+	 * @param number
+	 * @return "fizz" or "buzz" or "fizz buzz" or number
+	 */
 	public static String fizzBuzz(Integer number) {
 		
 		StringBuilder result = new StringBuilder();
@@ -38,9 +46,12 @@ public class FizzBuzz {
 	}
 
 	/**
-	 * 	
+	 * 	This method returns below:
+	 * "fizz" if number is divisible by 3 or if it has a 3 in it
+	 * "buzz" if number is divisible by 5 or if it has a 5 in it
+	 * if number is both "fizz" and "buzz" at the same time. If this happens then returns "fizz buzz"
 	 * @param number
-	 * @return
+	 * @return "fizz" or "buzz" or "fizz buzz"
 	 */
 	public static String fizz_Buzz(Integer number) {
 		
@@ -67,4 +78,4 @@ public class FizzBuzz {
 		return result.toString();
 	}
 
-}
+}
