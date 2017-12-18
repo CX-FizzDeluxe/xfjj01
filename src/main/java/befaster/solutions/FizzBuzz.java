@@ -59,38 +59,32 @@ public class FizzBuzz {
 	 * @param number
 	 * @return "fizz" or "buzz" or "fizz buzz" or number
 	 */
-	/*public static String fizz_Buzz(Integer number) {
+	/*
+	 * public static String fizz_Buzz(Integer number) {
+	 * 
+	 * StringBuilder result = new StringBuilder(); Boolean isRes = false;
+	 * 
+	 * if (number % THREE_INT == 0 || number.toString().indexOf(THREE_STR) >= 0)
+	 * { result.append(FIZZ); isRes = true; } if (number % FIVE_INT == 0 ||
+	 * number.toString().indexOf(FIVE_STR) >= 0) { if (isRes) {
+	 * result.append(SPACE); } result.append(BUZZ); isRes = true; }
+	 * 
+	 * if (!isRes.booleanValue()) { result.append(number.intValue()); }
+	 * 
+	 * return result.toString(); }
+	 */
 
-		StringBuilder result = new StringBuilder();
-		Boolean isRes = false;
-
-		if (number % THREE_INT == 0 || number.toString().indexOf(THREE_STR) >= 0) {
-			result.append(FIZZ);
-			isRes = true;
-		}
-		if (number % FIVE_INT == 0 || number.toString().indexOf(FIVE_STR) >= 0) {
-			if (isRes) {
-				result.append(SPACE);
-			}
-			result.append(BUZZ);
-			isRes = true;
-		}
-
-		if (!isRes.booleanValue()) {
-			result.append(number.intValue());
-		}
-
-		return result.toString();
-	}*/
-	
 	/**
 	 * This method returns below: "fizz" if number is divisible by 3 or if it
 	 * has a 3 in it "buzz" if number is divisible by 5 or if it has a 5 in it
 	 * if number is both "fizz" and "buzz" at the same time. If this happens
-	 * then returns "fizz buzz"
+	 * then returns "fizz buzz". A number is considered to be "deluxe" if it is
+	 * greater than 10 and all the digits are identical. A number can be "fizz",
+	 * "buzz" and "deluxe" at the same time. If this happens then write
+	 * "fizz buzz deluxe"
 	 * 
 	 * @param number
-	 * @return "fizz" or "buzz" or "fizz buzz" or number
+	 * @return "fizz" or "buzz" or "deluxe" or "fizz buzz" or "fizz deluxe" or  "buzz deluxe" or "fizz buzz deluxe" or number
 	 */
 	public static String fizz_Buzz(Integer number) {
 
@@ -101,6 +95,8 @@ public class FizzBuzz {
 			result.append(FIZZ);
 			isRes = true;
 		}
+		
+		
 		if (number % FIVE_INT == 0 || number.toString().indexOf(FIVE_STR) >= 0) {
 			if (isRes) {
 				result.append(SPACE);
@@ -109,6 +105,7 @@ public class FizzBuzz {
 			isRes = true;
 		}
 
+		if()
 		if (!isRes.booleanValue()) {
 			result.append(number.intValue());
 		}
