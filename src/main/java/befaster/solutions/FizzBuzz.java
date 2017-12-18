@@ -9,8 +9,10 @@ public class FizzBuzz {
 	public static final String FIZZ = "fizz";
 
 	public static final String BUZZ = "buzz";
-	
+
 	public static final String DELUXE = "deluxe";
+	
+	public static final String FAKE = "fake";
 
 	public static final String THREE_STR = "3";
 
@@ -86,7 +88,8 @@ public class FizzBuzz {
 	 * "fizz buzz deluxe"
 	 * 
 	 * @param number
-	 * @return "fizz" or "buzz" or "deluxe" or "fizz buzz" or "fizz deluxe" or  "buzz deluxe" or "fizz buzz deluxe" or number
+	 * @return "fizz" or "buzz" or "deluxe" or "fizz buzz" or "fizz deluxe" or
+	 *         "buzz deluxe" or "fizz buzz deluxe" or number
 	 */
 	public static String fizz_Buzz(Integer number) {
 
@@ -97,13 +100,20 @@ public class FizzBuzz {
 			result.append(FIZZ);
 			isRes = true;
 		}
-		
-		
+
 		if (number % FIVE_INT == 0 || number.toString().indexOf(FIVE_STR) >= 0) {
 			if (isRes) {
 				result.append(SPACE);
 			}
 			result.append(BUZZ);
+			isRes = true;
+		}
+
+		if (isNumberFakeDeluxe(number)) {
+			if (isRes) {
+				result.append(SPACE);
+			}
+			result.append(FAKE);
 			isRes = true;
 		}
 
@@ -114,8 +124,7 @@ public class FizzBuzz {
 			result.append(DELUXE);
 			isRes = true;
 		}
-		
-		
+
 		if (!isRes.booleanValue()) {
 			result.append(number.intValue());
 		}
@@ -124,31 +133,51 @@ public class FizzBuzz {
 	}
 
 	/**
-	 * A number is considered to be "deluxe" if it is greater than 10 and all the digits are identical
+	 * A number is considered to be "deluxe" if it is greater than 10 and all
+	 * the digits are identical
+	 * 
 	 * @param number
 	 * @return true if number is deluxe else false.
 	 */
 	private static boolean isNumberDeluxe(Integer number) {
-		
+
 		Boolean isDeluxe = false;
-		
+
 		Boolean isDigitIdentical = true;
 		String numberStr = number.toString();
 		char firstChar = numberStr.charAt(0);
-		
+
 		// we can use search alogs like binary search etc..
-		for(int i=0; i<numberStr.length(); i++) {
-			if(!(numberStr.charAt(i) == firstChar)) {
+		for (int i = 0; i < numberStr.length(); i++) {
+			if (!(numberStr.charAt(i) == firstChar)) {
 				isDigitIdentical = false;
 				break;
 			}
 		}
-		
-		if(isDigitIdentical && number > 10) {
+
+		if (isDigitIdentical && number > 10) {
 			isDeluxe = true;
 		}
-		
+
 		return isDeluxe;
+	}
+
+	/**
+	 * A number is considered to be "deluxe" if it is greater than 10 and all
+	 * the digits are identical If a "deluxe" number is odd, we should call him
+	 * "fake deluxe"
+	 * 
+	 * @param number
+	 * @return true if number is fake deluxe, else return false.
+	 */
+	private static boolean isNumberFakeDeluxe(Integer number) {
+
+		Boolean isFakeDeluxe = false;
+		if (isNumberDeluxe(number) && number % 2 != 0) {
+			isFakeDeluxe = true;
+		}
+
+		return isFakeDeluxe;
 	}
 
 }
