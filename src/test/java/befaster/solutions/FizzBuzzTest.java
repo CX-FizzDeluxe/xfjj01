@@ -104,7 +104,7 @@ public class FizzBuzzTest {
 
     @Test
     public void testFizz_BuzzInputMultiple5_Greater10() {
-        assertThat(FizzBuzz.fizz_Buzz(15), equalTo("buzz"));
+        assertThat(FizzBuzz.fizz_Buzz(25), equalTo("buzz"));
     }
     
     /*@Test
@@ -114,12 +114,12 @@ public class FizzBuzzTest {
     
     @Test
     public void testFizz_BuzzInputMultiple5_Greater10_DigitsIdentical() {
-        assertThat(FizzBuzz.fizz_Buzz(555), equalTo("buzz deluxe"));
+        assertThat(FizzBuzz.fizz_Buzz(5555), equalTo("buzz deluxe"));
     }
     
     @Test
     public void testFizz_BuzzInputHas5_Greater10() {
-        assertThat(FizzBuzz.fizz_Buzz(51), equalTo("buzz"));
+        assertThat(FizzBuzz.fizz_Buzz(52), equalTo("buzz"));
     }
     
     /*@Test
