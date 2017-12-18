@@ -54,8 +54,21 @@ public class FizzBuzzTest {
     }
     
     @Test
+    public void testFizz_BuzzInputHas_3() {
+    	Integer number = 136;
+    	System.out.println(number.toString().indexOf(3));
+    	
+        assertThat(FizzBuzz.fizz_Buzz(136), equalTo("fizz"));
+    }
+    
+    @Test
     public void testFizz_BuzzInputMultiple_5() {
         assertThat(FizzBuzz.fizz_Buzz(20), equalTo("buzz"));
+    }
+    
+    @Test
+    public void testFizz_BuzzInputHas_5() {
+        assertThat(FizzBuzz.fizz_Buzz(125), equalTo("fizz"));
     }
     
     @Test
