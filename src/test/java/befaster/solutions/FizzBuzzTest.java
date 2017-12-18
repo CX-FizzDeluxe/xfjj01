@@ -156,8 +156,9 @@ public class FizzBuzzTest {
     }
     
     
-    @Test
-    public void testFizz_Buzz_Divisible3_Nothave3Or5_Greater10_DigitsIdentical() {
-        assertThat(FizzBuzz.fizz_Buzz(999), equalTo("fizz buzz deluxe"));
-    }
+    /*@Test
+    public void testFizz_Buzz_Divisible3And5_Greater10_DigitsIdentical() {
+        assertThat(FizzBuzz.fizz_Buzz(?), equalTo("fizz buzz deluxe"));
+    }*/
+    
 }
