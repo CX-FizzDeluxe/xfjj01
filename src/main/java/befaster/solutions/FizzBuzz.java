@@ -143,22 +143,19 @@ public class FizzBuzz {
 	private static boolean isNumberDeluxe(Integer number) {
 
 		Boolean isDeluxe = false;
-
+		Boolean isDigitIdentical = true;
 		
 		int digit = number % 10;
 		while (number>0) {
 			if(number %10 != digit) {
+				isDigitIdentical = false;
 				break;
 			} 
 			number /= 10; 
 		}
 		
-		isDeluxe = true;
-
-		if (isDeluxe && number > 10) {
+		if (isDigitIdentical && number > 10) {
 			isDeluxe = true;
-		} else {
-			isDeluxe = false;
 		}
 
 		return isDeluxe;
