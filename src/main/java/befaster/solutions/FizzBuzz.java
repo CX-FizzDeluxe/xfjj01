@@ -9,6 +9,8 @@ public class FizzBuzz {
 	public static final String FIZZ = "fizz";
 
 	public static final String BUZZ = "buzz";
+	
+	public static final String DELUXE = "deluxe";
 
 	public static final String THREE_STR = "3";
 
@@ -105,12 +107,34 @@ public class FizzBuzz {
 			isRes = true;
 		}
 
-		if()
+		if (isNumberDeluxe(number)) {
+			if (isRes) {
+				result.append(SPACE);
+			}
+			result.append(DELUXE);
+			isRes = true;
+		}
+		
+		
 		if (!isRes.booleanValue()) {
 			result.append(number.intValue());
 		}
 
 		return result.toString();
+	}
+
+	/**
+	 * A number is considered to be "deluxe" if it is greater than 10 and all the digits are identical
+	 * @param number
+	 * @return true if number is deluxe else false.
+	 */
+	private static boolean isNumberDeluxe(Integer number) {
+		
+		Boolean isDeluxe = false;
+		
+		if()
+		
+		return false;
 	}
 
 }
