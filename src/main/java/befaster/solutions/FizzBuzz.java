@@ -131,8 +131,12 @@ public class FizzBuzz {
 	private static boolean isNumberDeluxe(Integer number) {
 		
 		Boolean isDeluxe = false;
-		
-		if()
+		String numberStr = number.toString();
+		char firstChar = numberStr.charAt(0);
+		for(number.)
+		if(number > 10 && true) {
+			
+		}
 		
 		return false;
 	}
