@@ -54,6 +54,16 @@ public class FizzBuzzTest {
     }
     
     @Test
+    public void testFizz_BuzzInputMultiple3Has3Odd() {
+        assertThat(FizzBuzz.fizz_Buzz(3), equalTo("fizz fake deluxe"));
+    }
+    
+    @Test
+    public void testFizz_BuzzInputMultiple3Has3() {
+        assertThat(FizzBuzz.fizz_Buzz(324), equalTo("fizz deluxe"));
+    }
+    
+    @Test
     public void testFizz_BuzzInputHas_3() {
         assertThat(FizzBuzz.fizz_Buzz(136), equalTo("fizz"));
     }
@@ -100,7 +110,10 @@ public class FizzBuzzTest {
         assertThat(FizzBuzz.fizz_Buzz(511), equalTo("buzz"));
     }
     
-    
+    @Test
+    public void testFizz_BuzzInputMultiple_5_Has_5() {
+        assertThat(FizzBuzz.fizz_Buzz(515), equalTo("buzz fake deluxe"));
+    }
 
     @Test
     public void testFizz_BuzzInputMultiple5_Greater10() {
