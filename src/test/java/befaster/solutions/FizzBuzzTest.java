@@ -81,7 +81,7 @@ public class FizzBuzzTest {
     
     @Test
     public void testFizz_BuzzInputMultiple3_Greater10_DigitsIdentical() {
-        assertThat(FizzBuzz.fizz_Buzz(666), equalTo("fizz deluxe"));
+        assertThat(FizzBuzz.fizz_Buzz(666), equalTo("fizz"));
     }
     
     @Test
@@ -144,7 +144,7 @@ public class FizzBuzzTest {
     
     @Test
     public void testFizz_BuzzInputHasBoth_3_5_NotMultiple() {
-        assertThat(FizzBuzz.fizz_Buzz(5334), equalTo("fizz buzz"));
+        assertThat(FizzBuzz.fizz_Buzz(5374), equalTo("fizz buzz"));
     }
     
     @Test
