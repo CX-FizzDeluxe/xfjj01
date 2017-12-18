@@ -179,19 +179,9 @@ public class FizzBuzz {
 	private static boolean isNumberDeluxe(Integer number) {
 
 		Boolean isDeluxe = false;
-		Boolean isDigitIdentical = true;
-		Integer numberTemp = number;
 		
-		int digit = numberTemp % 10;
-		while (numberTemp>0) {
-			if(numberTemp %10 != digit) {
-				isDigitIdentical = false;
-				break;
-			} 
-			numberTemp /= 10; 
-		}
-		
-		if (isDigitIdentical && number > 10) {
+		if ((number % THREE_INT == 0 && number.toString().indexOf(THREE_STR) >= 0) || 
+				(number % FIVE_INT == 0 && number.toString().indexOf(FIVE_STR) >= 0)) {
 			isDeluxe = true;
 		}
 
