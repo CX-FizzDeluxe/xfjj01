@@ -109,7 +109,8 @@ public class FizzBuzz {
 			isRes = true;
 		}
 
-		if (isNumberFakeDeluxe(number)) {
+		Boolean isNumDeluxe = isNumberDeluxe(number);
+		if (isNumDeluxe && number % 2 != 0) {
 			if (isRes) {
 				result.append(SPACE);
 			}
@@ -117,7 +118,7 @@ public class FizzBuzz {
 			isRes = true;
 		}
 
-		if (isNumberDeluxe(number)) {
+		if (isNumDeluxe) {
 			if (isRes) {
 				result.append(SPACE);
 			}
@@ -162,22 +163,5 @@ public class FizzBuzz {
 		return isDeluxe;
 	}
 
-	/**
-	 * A number is considered to be "deluxe" if it is greater than 10 and all
-	 * the digits are identical If a "deluxe" number is odd, we should call him
-	 * "fake deluxe"
-	 * 
-	 * @param number
-	 * @return true if number is fake deluxe, else return false.
-	 */
-	private static boolean isNumberFakeDeluxe(Integer number) {
-
-		Boolean isFakeDeluxe = false;
-		if (isNumberDeluxe(number) && number % 2 != 0) {
-			isFakeDeluxe = true;
-		}
-
-		return isFakeDeluxe;
-	}
 
 }
