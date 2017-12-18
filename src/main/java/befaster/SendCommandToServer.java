@@ -58,9 +58,9 @@ public class SendCommandToServer {
                 .withActionIfNoArgs(RunnerAction.testConnectivity)
                 .withSolutionFor("sum", p -> Sum.sum(asInt(p[0]), asInt(p[1])))
                 .withSolutionFor("hello", p -> Hello.hello(p[0]))
-                .withSolutionFor("fizz_buzz", p -> FizzBuzz.fizzBuzz(asInt(p[0])))
+                .withSolutionFor("fizz_buzz", p -> FizzBuzz.fizz_Buzz(asInt(p[0])))
                 .withSolutionFor("checkout", p -> Checkout.checkout(p[0]))
                 .start(args);
     }
 
-}
+}

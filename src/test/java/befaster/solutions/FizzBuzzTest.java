@@ -65,11 +65,17 @@ public class FizzBuzzTest {
     
     @Test
     public void testFizz_BuzzInputHas_5() {
-        assertThat(FizzBuzz.fizz_Buzz(125), equalTo("fizz"));
+        assertThat(FizzBuzz.fizz_Buzz(511), equalTo("buzz"));
     }
     
     @Test
     public void testFizz_BuzzInputMultiple_3_5() {
         assertThat(FizzBuzz.fizz_Buzz(15), equalTo("fizz buzz"));
     }
+    
+    @Test
+    public void testFizz_BuzzInputHasBoth_3_5() {
+        assertThat(FizzBuzz.fizz_Buzz(5334), equalTo("fizz buzz"));
+    }
+    
 }
