@@ -10,15 +10,27 @@ public class FizzBuzz {
 
 	public static final Integer FIVE_INT = 5;
 
+	private static final String SPACE = " ";
+
 	public static String fizzBuzz(Integer number) {
 		
 		StringBuilder result = new StringBuilder();
+		Boolean isRes = false; 
 		
 		if (number % THREE_INT == 0) {
 			result.append(FIZZ);
-		} else if (number % FIVE_INT == 0) {
+			isRes = true;
+		}
+		if (number % FIVE_INT == 0) {
+			if(isRes) {
+				result.append(SPACE);
+			}
 			result.append(BUZZ);
-		} else {
+			isRes = true;
+		}
+		
+		if(!isRes.booleanValue())
+		{
 			result.append(number.intValue());
 		}
 
