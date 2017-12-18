@@ -144,14 +144,15 @@ public class FizzBuzz {
 
 		Boolean isDeluxe = false;
 		Boolean isDigitIdentical = true;
+		Integer numberTemp = number;
 		
-		int digit = number % 10;
-		while (number>0) {
-			if(number %10 != digit) {
+		int digit = numberTemp % 10;
+		while (numberTemp>0) {
+			if(numberTemp %10 != digit) {
 				isDigitIdentical = false;
 				break;
 			} 
-			number /= 10; 
+			numberTemp /= 10; 
 		}
 		
 		if (isDigitIdentical && number > 10) {

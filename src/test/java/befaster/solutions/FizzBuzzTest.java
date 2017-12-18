@@ -160,10 +160,6 @@ public class FizzBuzzTest {
     }
     
     
-    @Test
-    public void testFizz_Buzz_Divisible3And5_Greater10_DigitsIdentical() {
-        assertThat(FizzBuzz.fizz_Buzz(555), equalTo("fizz buzz deluxe"));
-    }
     
     
     
