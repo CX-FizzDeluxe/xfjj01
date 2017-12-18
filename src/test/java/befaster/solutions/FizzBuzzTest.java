@@ -122,13 +122,9 @@ public class FizzBuzzTest {
 
     @Test
     public void testFizz_BuzzInputMultiple5_Greater10() {
-        assertThat(FizzBuzz.fizz_Buzz(25), equalTo("buzz"));
+        assertThat(FizzBuzz.fizz_Buzz(25), equalTo("buzz fake deluxe"));
     }
     
-    /*@Test
-    public void testFizz_BuzzInputMultiple5_DigitsIdentical() {
-        assertThat(FizzBuzz.fizz_Buzz(555), equalTo("buzz deluxe"));
-    }*/
     
     @Test
     public void testFizz_BuzzInputMultiple5_Greater10_DigitsIdenticalOdd() {
@@ -140,31 +136,25 @@ public class FizzBuzzTest {
         assertThat(FizzBuzz.fizz_Buzz(52), equalTo("buzz"));
     }
     
-    /*@Test
-    public void testFizz_BuzzInputHas5_DigitsIdentical() {
-        assertThat(FizzBuzz.fizz_Buzz(555), equalTo("buzz deluxe"));
-    }*/
-    
-    
     
     @Test
-    public void testFizz_BuzzInputMultiple_3_5() {
-        assertThat(FizzBuzz.fizz_Buzz(15), equalTo("fizz buzz"));
+    public void testFizz_BuzzInputMultiple_3_5_has5_Odd() {
+        assertThat(FizzBuzz.fizz_Buzz(15), equalTo("fizz buzz fake deluxe"));
     }
     
     @Test
-    public void testFizz_BuzzInputHasBoth_3_5() {
+    public void testFizz_BuzzInputHasBoth_3_5_NotMultiple() {
         assertThat(FizzBuzz.fizz_Buzz(5334), equalTo("fizz buzz"));
     }
     
     @Test
     public void testFizz_BuzzInput_NotMultiple3Or5_Greater10_DigitsIdentical() {
-        assertThat(FizzBuzz.fizz_Buzz(8888), equalTo("deluxe"));
+        assertThat(FizzBuzz.fizz_Buzz(8888), equalTo("8888"));
     }
     
     @Test
     public void testFizz_BuzzInput_NotMultiple3Or5_Greater10_DigitsIdentical_Odd() {
-        assertThat(FizzBuzz.fizz_Buzz(7777), equalTo("fake deluxe"));
+        assertThat(FizzBuzz.fizz_Buzz(7777), equalTo("7777"));
     }
     
     @Test
@@ -173,9 +163,11 @@ public class FizzBuzzTest {
     }
     
     @Test
-    public void testFizz_Buzz_Divisible3_Nothave3Or5_Greater10_DigitsIdentical() {
-        assertThat(FizzBuzz.fizz_Buzz(666), equalTo("fizz deluxe"));
+    public void testFizz_Buzz_Multiple3_Nothave3Or5_Greater10_DigitsIdentical() {
+        assertThat(FizzBuzz.fizz_Buzz(666), equalTo("fizz"));
     }
+    
+    
     
     
     
