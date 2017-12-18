@@ -19,17 +19,17 @@ public class FizzBuzzTest {
     }
     
     @Test
-    public void testFizzBuzzInputFIZZ() {
+    public void testFizzBuzzInputMultiple_3() {
         assertThat(FizzBuzz.fizzBuzz(18), equalTo("fizz"));
     }
     
     @Test
-    public void testFizzBuzzInputBUZZ() {
+    public void testFizzBuzzInputMultiple_5() {
         assertThat(FizzBuzz.fizzBuzz(20), equalTo("buzz"));
     }
     
     @Test
-    public void testFizzBuzzInputFIZZBUZZ() {
+    public void testFizzBuzzInputMultiple_3_5() {
         assertThat(FizzBuzz.fizzBuzz(15), equalTo("fizz buzz"));
     }
     
